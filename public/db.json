@@ -1,0 +1,353 @@
+{
+  "drinks": [
+  {
+    "_id": "234523523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/c8a855358d484c51bb7d7c9d988a65c8_292x292.jpeg",
+    "name": "drinks",
+    "text": "Соберите свою пиццу 35 см с двумя разными вкусами",
+    "price": 634,
+    "popular": 1
+  },
+  {
+    "_id": "34534543",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/dfbbbf23b0a1454bb78537ae921df47c_292x292.jpeg",
+    "name": "drinks2",
+    "text": "Соберите свою пиццу 35 см с двумя разными вкусами",
+    "price": 523,
+    "popular": 4
+  },
+  {
+    "_id": "234",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1503f77bc8584945b084d4ba2fe0c577_292x292.jpeg",
+    "name": "drinks3",
+    "text": "Соберите свою пиццу 35 см с двумя разными вкусами",
+    "price": 455,
+    "popular": 0
+  },
+  {
+    "_id": "234",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/Drinks/ru-RU/412d499c-1bf7-4a9a-9249-000ae686d301.jpg",
+    "name": "drinks4",
+    "text": "Соберите свою пиццу 35 см с двумя разными вкусами",
+    "price": 785,
+    "popular": 5
+  },
+  {
+    "_id": "2346787234683523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/Drinks/ru-RU/412d499c-1bf7-4a9a-9249-000ae686d301.jpg",
+    "name": "drinks5",
+    "text": "Соберите свою пиццу 35 см с двумя разными вкусами",
+    "price": 785,
+    "popular": 5
+  }
+],
+"pizzas": [
+  {
+    "_id": "23455623523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/7c4d26241a864e1f981e7a285928efa9_292x292.jpeg",
+    "name": "Пицца из половинок",
+    "text": "Соберите свою пиццу 35 см с двумя разными вкусами",
+    "price": 634,
+    "popular": 1
+  },
+  {
+    "_id": "345345676543",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/b3c4109c40e24b618c47562a93c992cf_292x292.jpeg",
+    "name": "4 сыра",
+    "text": "Соберите свою пиццу 35 см с двумя разными вкусами",
+    "price": 523,
+    "popular": 4
+  },
+  {
+    "_id": "23346762343523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/f5efd84790134654b9eb84c89f2c9ca8_292x292.jpeg",
+    "name": "Острая",
+    "text": "Соберите свою пиццу 35 см с двумя разными вкусами",
+    "price": 455,
+    "popular": 0
+  },
+  {
+    "_id": "2346787623483523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/03e6638d-0185-415f-9781-bc906e3fd3f5.jpg",
+    "name": "Пеперони",
+    "text": "Соберите свою пиццу 35 см с двумя разными вкусами",
+    "price": 785,
+    "popular": 5
+  }
+],
+"combo": [
+  {
+    "_id": "234565678623523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/d44de211192042ae96487ea4ed510404_292x292.png",
+    "name": "Пицца и 2 закуски",
+    "text": "Пицца 30 см и 2 закуски на выбор. Для компании из 2–4 человек",
+    "price": 634,
+    "popular": 1
+  },
+  {
+    "_id": "345345667876543",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/4d6d7a4a16554936a46fc30f9b41a5d1_292x292.png",
+    "name": "Комбо за 999 ₽",
+    "text": "3 пиццы 30 см на тонком тесте по суперцене. Выбор пицц ограничен",
+    "price": 999,
+    "popular": 4
+  },
+  {
+    "_id": "233467676782343523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/3c7e4f15243447feac0187c638548cd1_292x292.png",
+    "name": "Бодрое утро",
+    "text": "2 кофе 400 мл и 2 закуски или десерта на выбор",
+    "price": 536,
+    "popular": 0
+  },
+  {
+    "_id": "234678762783483523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/b7ecf4166f544029bb9ba88ec189b43b_292x292.png",
+    "name": "4 Додстера",
+    "text": "4 любых Додстера на выбор: Острый, Чипотле или Классический",
+    "price": 499,
+    "popular": 5
+  }
+],
+"desserts": [
+  {
+    "_id": "23456567667878623523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/ee223d1417e149babc8a04c710a7e9be_292x292.jpeg",
+    "name": "Блинчики с малиной, 2 шт",
+    "text": "Воздушные блинчики с малиновой начинкой, приготовленные в печи",
+    "price": 126,
+    "popular": 1
+  },
+  {
+    "_id": "345345675667867876543",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/c810798810a947cfb071ae825230bed4_292x292.jpeg",
+    "name": "Яблочный пирог",
+    "text": "Десерт из песочного теста с яблочной начинкой. Может содержать изюм",
+    "price": 119,
+    "popular": 4
+  },
+  {
+    "_id": "233467656776767882343523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/4de982c0e81446cd9ea1a6a1b5d0bdb8_292x292.jpeg",
+    "name": "Сырники с малиновым вареньем, 4 шт",
+    "text": "Нежные сырники, приготовленные в печи, с малиновым вареньем, 4 шт",
+    "price": 290,
+    "popular": 0
+  },
+  {
+    "_id": "234678756766a782783483523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234678756766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa678756766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa6578756766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa6787d56766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa6578756766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa6787d356766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa65783756766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa6787d356766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa6787da356766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa6787ada356766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa67adaa356766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },{
+    "_id": "234565676f878623523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/ee223d1417e149babc8a04c710a7e9be_292x292.jpeg",
+    "name": "Блинчики с малиной, 2 шт",
+    "text": "Воздушные блинчики с малиновой начинкой, приготовленные в печи",
+    "price": 126,
+    "popular": 1
+  },
+  {
+    "_id": "3453456f67867876543",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/c810798810a947cfb071ae825230bed4_292x292.jpeg",
+    "name": "Яблочный пирог",
+    "text": "Десерт из песочного теста с яблочной начинкой. Может содержать изюм",
+    "price": 119,
+    "popular": 4
+  },
+  {
+    "_id": "2334676j76767882343523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/4de982c0e81446cd9ea1a6a1b5d0bdb8_292x292.jpeg",
+    "name": "Сырники с малиновым вареньем, 4 шт",
+    "text": "Нежные сырники, приготовленные в печи, с малиновым вареньем, 4 шт",
+    "price": 290,
+    "popular": 0
+  },
+  {
+    "_id": "234678756ha782783483523",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "23467n56766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sam756766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa657n6766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa67bd56766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa6578v56766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa6786356766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa6576756766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234sa657d356766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "234s487da356766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "2387ada356766a",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  },
+  {
+    "_id": "1",
+    "urlImg":"https://dodopizza-a.akamaihd.net/static/Img/Products/1f2ad1463e994ea5849688b64412fd23_292x292.jpeg",
+    "name": "Пончик клубничный",
+    "text": "Нежный пончик с клубничной начинкой и разноцветной посыпкой",
+    "price": 89,
+    "popular": 5
+  }
+]
+}
