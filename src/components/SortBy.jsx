@@ -17,7 +17,8 @@ const SortBy = React.memo(function SortBy({ setChangeSortBy, selectSort, sortIte
   }
 
   React.useEffect(() => {
-    document.body.addEventListener("click", handleOutsideClick)
+    document.addEventListener("click", handleOutsideClick)
+    return () => document.removeEventListener("click", handleOutsideClick)
   }, [])
 
   return (

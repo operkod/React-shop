@@ -1,34 +1,40 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { addProductToCart, setNavBar, setSortBy } from "../../redux/action"
+import { addProductToCart, fetchProducts, setNavBar, setSortBy } from "../../redux/action"
 import { Header, LoaderProduct, Product, SortBy } from "../../components"
 
-const Home = ({ items, navBar, sortBy, isLoaded, navItem, sortItems }) => {
-  const { totalCount, totalPrice } = useSelector(({ cart }) => cart)
-
+const Home = () => {
+  const navItems = [
+    { name: "Пицца", type: "pizzas" },
+    { name: "Напитки", type: "drinks" },
+    { name: "Десерты", type: "desserts" },
+    { name: "Комбо", type: "combo" }
+  ]
+  const sortItems = [
+    { name: "Ретабельности", type: "name" },
+    { name: "Цена", type: "price" },
+    { name: "Популярности", type: "popular" }
+  ]
   const dispatch = useDispatch()
-  const productTitle = navItem.find((obj) => obj.type === navBar).name
+  const { items, navBar, sortBy, isLoaded } = useSelector(({ app }) => app)
+  React.useEffect(() => {
+    dispatch(fetchProducts(navBar, sortBy))
+  }, [navBar, sortBy])
+  const productTitle = navItems.find((obj) => obj.type === navBar).name
+
   const onChangeNav = (el) => {
     dispatch(setNavBar(el.type))
   }
-
   const handleAddProductToCart = (obj) => {
     dispatch(addProductToCart(obj))
   }
-
-  const setChangeSortBy = React.useCallback((el) => {
+  const setChangeSortBy = (el) => {
     dispatch(setSortBy(el))
-  }, [])
-  
+  }
+
   return (
     <>
-      <Header
-        totalCount={totalCount}
-        totalPrice={totalPrice}
-        activeNavBar={navBar}
-        onChangeClick={onChangeNav}
-        navItem={navItem}
-      />
+      <Header activeNavBar={navBar} onChangeClick={onChangeNav} navItems={navItems} />
       <main className="container">
         <section className="products">
           <div className="title">
