@@ -21,14 +21,12 @@ export const setLoaded = (payload) => ({
   type: SET_LOADED,
   payload
 })
-export const fetchProducts = (navBar, sortBy, limitItem) => (dispatch) => {
+export const fetchProducts = (navBar, sortBy) => (dispatch) => {
   dispatch(setLoaded(false))
-  axios
-    .get(`http://localhost:3001/${navBar}?_sort=${sortBy}&_page=1&_limit=${limitItem}`)
-    .then(({ data }) => {
-      dispatch(setProduct(data))
-      dispatch(setLoaded(true))
-    })
+  axios.get(`http://localhost:3001/${navBar}?_sort=${sortBy}`).then(({ data }) => {
+    dispatch(setProduct(data))
+    dispatch(setLoaded(true))
+  })
 }
 export const setProduct = (payload) => ({
   type: SET_PRODUCT,

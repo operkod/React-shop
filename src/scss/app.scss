@@ -23,7 +23,9 @@ button:focus,
 button:active {
   outline: none;
 }
-
+.wrapper {
+  position: relative;
+}
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -44,13 +46,13 @@ section:last-child {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 3vw;
-    @media (max-width: 850px) {
+    @media (max-width: 1000px) {
       grid-template-columns: 1fr 1fr 1fr;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 850px) {
       grid-template-columns: 1fr 1fr;
     }
-    @media (max-width: 450px) {
+    @media (max-width: 600px) {
       grid-template-columns: 1fr;
     }
 
@@ -139,6 +141,7 @@ section:last-child {
   display: flex;
   height: 100vh;
   &-title {
+    text-align: center;
     font-size: 28px;
     font-weight: 700;
   }
@@ -228,4 +231,56 @@ section:last-child {
 ::-webkit-resizer {
   background-color: $orange;
 }
+
+//=== burger ===
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin: 10px 0;
+}
+.menu-btn__burger {
+  width: 50px;
+  height: 4px;
+  background-color: black;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background: black;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
 @import "./components";

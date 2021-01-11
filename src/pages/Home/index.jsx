@@ -1,40 +1,38 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { addProductToCart, fetchProducts, setNavBar, setSortBy } from "../../redux/action"
+
+import { addProductToCart, setSortBy, setNavBar } from "../../redux/action"
 import { Header, LoaderProduct, Product, SortBy } from "../../components"
 
 const Home = () => {
+  const sortItems = [
+    { name: "Рентабельности", type: "name" },
+    { name: "Цена", type: "price" },
+    { name: "Популярности", type: "popular" }
+  ]
   const navItems = [
     { name: "Пицца", type: "pizzas" },
     { name: "Напитки", type: "drinks" },
     { name: "Десерты", type: "desserts" },
     { name: "Комбо", type: "combo" }
   ]
-  const sortItems = [
-    { name: "Ретабельности", type: "name" },
-    { name: "Цена", type: "price" },
-    { name: "Популярности", type: "popular" }
-  ]
-  const dispatch = useDispatch()
   const { items, navBar, sortBy, isLoaded } = useSelector(({ app }) => app)
-  React.useEffect(() => {
-    dispatch(fetchProducts(navBar, sortBy))
-  }, [navBar, sortBy])
   const productTitle = navItems.find((obj) => obj.type === navBar).name
-
-  const onChangeNav = (el) => {
+  const dispatch = useDispatch()
+  const onClickNav = (el) => {
     dispatch(setNavBar(el.type))
+  }
+
+  const setChangeSortBy = (el) => {
+    dispatch(setSortBy(el))
   }
   const handleAddProductToCart = (obj) => {
     dispatch(addProductToCart(obj))
   }
-  const setChangeSortBy = (el) => {
-    dispatch(setSortBy(el))
-  }
 
   return (
     <>
-      <Header activeNavBar={navBar} onChangeClick={onChangeNav} navItems={navItems} />
+      <Header activeNavBar={navBar} handelNav={onClickNav} navItems={navItems} />
       <main className="container">
         <section className="products">
           <div className="title">
