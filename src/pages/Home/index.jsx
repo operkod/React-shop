@@ -23,9 +23,9 @@ const Home = () => {
     dispatch(setNavBar(el.type))
   }
 
-  const setChangeSortBy = (el) => {
+  const setChangeSortBy = React.useCallback((el) => {
     dispatch(setSortBy(el))
-  }
+  })
   const handleAddProductToCart = (obj) => {
     dispatch(addProductToCart(obj))
   }

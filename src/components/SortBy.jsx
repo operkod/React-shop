@@ -1,6 +1,6 @@
 import React from "react"
 
-const SortBy = React.memo(function SortBy({ setChangeSortBy, selectSort, sortItems }) {
+const SortBy = ({ setChangeSortBy, selectSort, sortItems }) => {
   const activeSortBY = sortItems.find((obj) => obj.type === selectSort).name
 
   const sortRef = React.useRef()
@@ -41,5 +41,5 @@ const SortBy = React.memo(function SortBy({ setChangeSortBy, selectSort, sortIte
       )}
     </div>
   )
-})
-export default SortBy
+}
+export default React.memo(SortBy)
