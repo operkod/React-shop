@@ -1,8 +1,8 @@
 import React from "react"
 import { Route, Switch } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { Home, Cart } from "./pages"
-import { fetchProducts, setNavBar, setSortBy } from "./redux/action"
+import { Home, Cart } from "pages"
+import { fetchProducts } from "redux/action"
 
 import "./scss/app.scss"
 

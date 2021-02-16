@@ -1,0 +1,72 @@
+@import "../../scss/variables";
+.cart {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100vh;
+  &-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  &__wrap {
+    width: 614px;
+    margin: 0px auto;
+  }
+  &__items {
+    height: 400px;
+    overflow-x: auto;
+  }
+  &__item {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+    padding: 15px 0;
+    border-bottom: 1px solid $color-size-secondary;
+    div:nth-child(2) {
+      justify-content: end;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-img {
+      img {
+        width: 70px;
+      }
+    }
+    &-count {
+      span {
+        min-width: 25px;
+        text-align: center;
+      }
+      button {
+        cursor: pointer;
+      }
+    }
+    &-price {
+    }
+    &-delete {
+      cursor: pointer;
+    }
+  }
+  &__items-space {
+    text-align: center;
+    img {
+      width: 350px;
+    }
+  }
+  &__footer {
+    &-sum {
+      display: flex;
+      justify-content: flex-end;
+      margin: 15px;
+      font-size: 20px;
+    }
+    &-btn {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import React from "react"
 
+import "./Sortby.scss"
+
 const SortBy = ({ setChangeSortBy, selectSort, sortItems }) => {
   const activeSortBY = sortItems.find((obj) => obj.type === selectSort).name
 

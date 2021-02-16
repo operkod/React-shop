@@ -1,0 +1,41 @@
+@import "../../scss/variables";
+
+.product {
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  box-shadow: 1px 1px 20px 0px $color-size-secondary;
+  border-radius: 10px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  .product-header {
+    &__img {
+      width: 100%;
+    }
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 10px 0;
+      font-weight: 500;
+      text-shadow: 2px 2px 1px $color-size-secondary;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 20px;
+      color: $color-size-secondary;
+    }
+  }
+}
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px;
+  &__price {
+    text-shadow: 2px 2px 1px $color-size-secondary;
+    font-size: 22px;
+    font-weight: 500;
+  }
+}

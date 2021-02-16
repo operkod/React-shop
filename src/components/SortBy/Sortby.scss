@@ -1,0 +1,33 @@
+@import "../../scss/variables";
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort {
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+  &__label {
+  }
+  &__popup {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 150px;
+    border-radius: 10px;
+    background-color: $color-secondary;
+    box-shadow: 5px 7px 39px 1px $color-size-secondary;
+    padding: 10px;
+    ul {
+      li {
+        cursor: pointer;
+        padding: 5px 2px;
+        &:hover {
+          background-color: $color-secondary;
+        }
+      }
+    }
+  }
+}

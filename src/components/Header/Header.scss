@@ -1,10 +1,11 @@
+@import "../../scss/variables";
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 2;
-  background-color: white;
-  box-shadow: 0.5px 0.5px 27px grey;
+  background-color: $color-secondary;
+  box-shadow: 0.5px 0.5px 27px $color-size-secondary;
 
   .container {
     position: relative;
@@ -13,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     @media (max-width: 601px) {
-      box-shadow: 0.5px 0.5px 27px grey;
+      box-shadow: 0.5px 0.5px 27px $color-size-secondary;
     }
   }
   &__nav {
@@ -30,10 +31,5 @@
     @media (max-width: 600px) {
       display: none;
     }
-  }
-}
-.menu-btn {
-  @media (min-width: 601px) {
-    display: none;
   }
 }

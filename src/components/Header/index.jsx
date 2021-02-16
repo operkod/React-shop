@@ -1,43 +1,36 @@
 import React from "react"
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
-import classNames from "class-names"
+import { numberWithSpace } from "helpers"
+import logo from "assets/img/logo.svg"
+import { Button, Nav, Menu, Burger } from ".."
 
-import logo from "../assets/img/logo.svg"
-import Button from "./Button"
-import Nav from "./Navigation"
-import Menu from "./Menu"
+import "./Header.scss"
 
 const Header = ({ activeNavBar, navItems, handelNav }) => {
-  const { totalCount, totalPrice } = useSelector(({ cart }) => cart)
   const [openMenu, setOpenMenu] = React.useState(false)
+  const { totalCount, totalPrice } = useSelector(({ cart }) => cart)
+
   const onClickOpenMenu = () => {
     setOpenMenu(!openMenu)
   }
   const closeMenu = () => {
-    setOpenMenu(() => false)
+    setOpenMenu(false)
   }
-  React.useEffect(() => {
-    if (openMenu) {
-      document.body.style.overflow = "hidden"
-    } else document.body.style.overflow = "auto"
-  }, [openMenu])
 
   return (
     <div className="header">
       <div className="container">
-        <div className={classNames("menu-btn", { open: openMenu })} onClick={onClickOpenMenu}>
-          <div className="menu-btn__burger"></div>
-        </div>
+        <Burger onClick={onClickOpenMenu} openMenu={openMenu} />
         <div className="header__nav">
           <div>
-            <img src={logo} alt="" />
+            <img src={logo} alt="Pizza" />
           </div>
           <Nav active={activeNavBar} onClick={handelNav} navItems={navItems} />
         </div>
         <Link className="header__cart" to="/cart">
           <Button>
-            {totalPrice === 0 ? "Корзина" : <span>{totalPrice} ₽</span>}
+            {totalPrice === 0 ? "Корзина" : <span>{numberWithSpace(totalPrice)} ₽</span>}
             <i></i>
             <span>{totalCount}</span>
           </Button>

@@ -23,7 +23,7 @@ export const setLoaded = (payload) => ({
 })
 export const fetchProducts = (navBar, sortBy) => (dispatch) => {
   dispatch(setLoaded(false))
-  axios.get(`/${navBar}?_sort=${sortBy}`).then(({ data }) => {
+  axios.get(`http://localhost:3001/${navBar}?_sort=${sortBy}`).then(({ data }) => {
     dispatch(setProduct(data))
     dispatch(setLoaded(true))
   })

@@ -1,5 +1,7 @@
 import React from "react"
 
+import "./Navigation.scss"
+
 const Nav = ({ onClick, active, navItems }) => {
   return (
     <nav className="nav">

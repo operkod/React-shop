@@ -1,8 +1,11 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
-import { Button } from "../../components"
-import { plusCartItem, minusCartItem, removeCartItem } from "../../redux/action"
+import { plusCartItem, minusCartItem, removeCartItem } from "redux/action"
+import { Button } from "components"
+import { numberWithSpace } from "helpers"
+
+import "./Cart.scss"
 
 const CartItem = ({ _id, urlImg, name, totalPrice, totalCount, onMinus, onPlus, onRemove }) => {
   const handelMinusItem = () => {
@@ -28,7 +31,7 @@ const CartItem = ({ _id, urlImg, name, totalPrice, totalCount, onMinus, onPlus, 
         <span>{totalCount}</span>
         <button onClick={handelPlusItem}>+</button>
       </div>
-      <div className="cart__item-price">{totalPrice} ₽</div>
+      <div className="cart__item-price">{numberWithSpace(totalPrice)} ₽</div>
       <div className="cart__item-delete" onClick={handelRemoveItem}>
         <svg width="20" height="20" fill="none">
           <path
@@ -59,7 +62,9 @@ const Cart = () => {
     dispatch(minusCartItem(id))
   }
   const onRemoveItem = (id) => {
-    dispatch(removeCartItem(id))
+    if (window.confirm("Вы действительно хотите удалить?")) {
+      dispatch(removeCartItem(id))
+    }
   }
   return (
     <div className="cart">
@@ -88,7 +93,9 @@ const Cart = () => {
           )}
         </div>
         <div className="cart__footer">
-          {totalPrice > 0 && <div className="cart__footer-sum">Ваша сума: {totalPrice} ₽</div>}
+          {totalPrice > 0 && (
+            <div className="cart__footer-sum">Ваша сума: {numberWithSpace(totalPrice)} ₽</div>
+          )}
           <div className="cart__footer-btn">
             <Link to="/" className="button">
               Вернутся на главную

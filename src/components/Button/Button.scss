@@ -1,0 +1,33 @@
+@import "../../scss/variables";
+
+.button {
+  cursor: pointer;
+  min-width: 130px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50px;
+  background-color: $color-primary;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-secondary;
+  transition: all 0.2s ease-out;
+  text-shadow: 1px 1px 1px $color-size-secondary;
+  &--shadow {
+    box-shadow: 1px 1px 6px $color-size-primary;
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 3px 4px 9px $color-size-primary;
+    }
+  }
+  &:hover {
+    background-color: darken($color-primary, 8%);
+  }
+  i {
+    margin: 0 12px;
+    padding: 0.5px;
+    opacity: 0.5;
+    background-color: $color-secondary;
+  }
+}
