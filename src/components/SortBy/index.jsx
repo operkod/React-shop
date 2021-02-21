@@ -1,18 +1,18 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import "./Sortby.scss"
 
 const SortBy = ({ setChangeSortBy, selectSort, sortItems }) => {
-  const activeSortBY = sortItems.find((obj) => obj.type === selectSort).name
-
-  const sortRef = React.useRef()
   const [visiblePopup, setVisiblePopup] = React.useState(false)
+  const activeSortBY = sortItems.find((obj) => obj.type === selectSort).name
+  const sortRef = React.useRef()
 
   const onChangePopup = () => {
     setVisiblePopup(!visiblePopup)
   }
-  const handleOutsideClick = (event) => {
-    const path = event.path
+  const handleOutsideClick = (e) => {
+    const path = e.path
     if (!path.includes(sortRef.current)) {
       setVisiblePopup(false)
     }
@@ -34,7 +34,7 @@ const SortBy = ({ setChangeSortBy, selectSort, sortItems }) => {
         <div className="sort__popup">
           <ul>
             {sortItems.map((item, index) => (
-              <li key={`${item}_${index}`} onClick={() => setChangeSortBy(item.type)}>
+              <li key={`${item}_${index}`} onClick={setChangeSortBy.bind(null, item.type)}>
                 {item.name}
               </li>
             ))}
@@ -45,3 +45,8 @@ const SortBy = ({ setChangeSortBy, selectSort, sortItems }) => {
   )
 }
 export default React.memo(SortBy)
+
+SortBy.propTypes = {
+  sortItems: PropTypes.string,
+  selectSort: PropTypes.array
+}

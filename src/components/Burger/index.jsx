@@ -1,5 +1,6 @@
 import React from "react"
 import classNames from "class-names"
+import PropTypes from "prop-types"
 
 import "./Burger.scss"
 
@@ -17,3 +18,7 @@ const Burger = ({ openMenu, onClick }) => {
 }
 
 export default Burger
+
+Burger.propTypes = {
+  openMenu: PropTypes.bool
+}

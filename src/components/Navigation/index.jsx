@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import "./Navigation.scss"
 
@@ -8,7 +9,7 @@ const Nav = ({ onClick, active, navItems }) => {
       <ul>
         {navItems.map((el, index) => (
           <li key={`${el.type}_${index}`}>
-            <a className={active === el.type ? "active" : ""} onClick={() => onClick(el)}>
+            <a className={active === el.type ? "active" : ""} onClick={onClick.bind(null, el)}>
               {el.name}
             </a>
           </li>
@@ -18,3 +19,8 @@ const Nav = ({ onClick, active, navItems }) => {
   )
 }
 export default Nav
+
+Nav.propTypes = {
+  active: PropTypes.string,
+  navItems: PropTypes.array
+}

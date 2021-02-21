@@ -1,14 +1,19 @@
 import React from "react"
+import PropTypes from "prop-types"
 import classNames from "class-names"
 import { Nav } from ".."
 
 import "./Menu.scss"
 
-const Menu = ({ handelNav, navItems, activeNavBar, openMenu, closeMenu }) => {
+const Menu = ({ handleNav, navItems, activeNavBar, openMenu, closeMenu }) => {
   return (
     <div className={classNames("menu", { active: openMenu })} onClick={closeMenu}>
-      <Nav onClick={handelNav} navItems={navItems} active={activeNavBar} />
+      <Nav onClick={handleNav} navItems={navItems} active={activeNavBar} />
     </div>
   )
 }
 export default Menu
+
+Menu.propTypes = {
+  openMenu: PropTypes.bool
+}

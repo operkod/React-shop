@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <>
-      <Header activeNavBar={navBar} handelNav={onClickNav} navItems={navItems} />
+      <Header activeNavBar={navBar} handleNav={onClickNav} navItems={navItems} />
       <div className="container">
         <section className="home">
           <div className="home-top">

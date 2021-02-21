@@ -1,6 +1,6 @@
 import React from "react"
 import classNames from "classnames"
-
+import PropTypes from "prop-types"
 import "./Button.scss"
 
 const Button = ({ onClick, children, className }) => {
@@ -11,3 +11,8 @@ const Button = ({ onClick, children, className }) => {
   )
 }
 export default Button
+
+Button.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.element
+}

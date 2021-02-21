@@ -1,7 +1,9 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Button } from ".."
 
 import "./Product.scss"
+
 const Product = ({ onClickAddProductCart, _id, name, text, urlImg, price, count }) => {
   const onAddProduct = () => {
     const obj = {
@@ -30,3 +32,11 @@ const Product = ({ onClickAddProductCart, _id, name, text, urlImg, price, count 
   )
 }
 export default Product
+
+Product.propTypes = {
+  _id: PropTypes.string,
+  name: PropTypes.string,
+  text: PropTypes.string,
+  price: PropTypes.number,
+  count: PropTypes.number
+}

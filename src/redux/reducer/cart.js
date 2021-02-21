@@ -22,16 +22,16 @@ const getTotalSum = (obj, path) => {
   }, 0)
 }
 
-export const cart = (state = initialState, action) => {
-  switch (action.type) {
+export const cart = (state = initialState, { type, payload }) => {
+  switch (type) {
     case ADD_PRODUCT_CART: {
-      const currentItems = !state.items[action.payload._id]
-        ? [action.payload]
-        : [...state.items[action.payload._id].items, action.payload]
+      const currentItems = !state.items[payload._id]
+        ? [payload]
+        : [...state.items[payload._id].items, payload]
 
       const newItems = {
         ...state.items,
-        [action.payload._id]: {
+        [payload._id]: {
           items: currentItems,
           totalPrice: getTotalPrice(currentItems)
         }
@@ -47,13 +47,10 @@ export const cart = (state = initialState, action) => {
       }
     }
     case PLUS_CART_ITEM: {
-      const newObjItems = [
-        ...state.items[action.payload].items,
-        state.items[action.payload].items[0]
-      ]
+      const newObjItems = [...state.items[payload].items, state.items[payload].items[0]]
       const newItems = {
         ...state.items,
-        [action.payload]: {
+        [payload]: {
           items: newObjItems,
           totalPrice: getTotalPrice(newObjItems)
         }
@@ -70,12 +67,11 @@ export const cart = (state = initialState, action) => {
       }
     }
     case MINUS_CART_ITEM: {
-      const oldItems = state.items[action.payload].items
-      const newObjItems =
-        oldItems.length > 1 ? state.items[action.payload].items.slice(1) : oldItems
+      const oldItems = state.items[payload].items
+      const newObjItems = oldItems.length > 1 ? state.items[payload].items.slice(1) : oldItems
       const newItems = {
         ...state.items,
-        [action.payload]: {
+        [payload]: {
           items: newObjItems,
           totalPrice: getTotalPrice(newObjItems)
         }
@@ -95,9 +91,9 @@ export const cart = (state = initialState, action) => {
       const newItems = {
         ...state.items
       }
-      const currentTotalPrice = newItems[action.payload].totalPrice
-      const currentTotalCount = newItems[action.payload].items.length
-      delete newItems[action.payload]
+      const currentTotalPrice = newItems[payload].totalPrice
+      const currentTotalCount = newItems[payload].items.length
+      delete newItems[payload]
       return {
         ...state,
         items: newItems,

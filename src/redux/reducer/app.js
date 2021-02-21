@@ -6,16 +6,16 @@ const initialState = {
   isLoaded: false
 }
 
-export const app = (state = initialState, action) => {
-  switch (action.type) {
+export const app = (state = initialState, { type, payload }) => {
+  switch (type) {
     case SET_PRODUCT:
-      return { ...state, items: action.payload }
+      return { ...state, items: payload }
     case SET_SORT_BY:
-      return { ...state, sortBy: action.payload }
+      return { ...state, sortBy: payload }
     case SET_NAV_BAR:
-      return { ...state, navBar: action.payload }
+      return { ...state, navBar: payload }
     case SET_LOADED:
-      return { ...state, isLoaded: action.payload }
+      return { ...state, isLoaded: payload }
     default:
       return state
   }

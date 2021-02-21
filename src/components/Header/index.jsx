@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { numberWithSpace } from "helpers"
@@ -7,7 +8,7 @@ import { Button, Nav, Menu, Burger } from ".."
 
 import "./Header.scss"
 
-const Header = ({ activeNavBar, navItems, handelNav }) => {
+const Header = ({ activeNavBar, navItems, handleNav }) => {
   const [openMenu, setOpenMenu] = React.useState(false)
   const { totalCount, totalPrice } = useSelector(({ cart }) => cart)
 
@@ -26,7 +27,7 @@ const Header = ({ activeNavBar, navItems, handelNav }) => {
           <div>
             <img src={logo} alt="Pizza" />
           </div>
-          <Nav active={activeNavBar} onClick={handelNav} navItems={navItems} />
+          <Nav active={activeNavBar} onClick={handleNav} navItems={navItems} />
         </div>
         <Link className="header__cart" to="/cart">
           <Button>
@@ -40,10 +41,18 @@ const Header = ({ activeNavBar, navItems, handelNav }) => {
         closeMenu={closeMenu}
         activeNavBar={activeNavBar}
         openMenu={openMenu}
-        handelNav={handelNav}
+        handleNav={handleNav}
         navItems={navItems}
       ></Menu>
     </div>
   )
 }
 export default Header
+
+Header.propTypes = {
+  activeNavBar: PropTypes.string,
+  navItems: PropTypes.array,
+  handelNav: PropTypes.func,
+  totalCount: PropTypes.number,
+  totalPrice: PropTypes.number
+}
